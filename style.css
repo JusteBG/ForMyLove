@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Serif", serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background: #0a0a0a;
+    color: #f8b4dcf3;
+}
+
+div{
+    z-index: 10;
+}
+
+.logo{
+    color: #fff;
+    font-size: 25px;
+    animation: logo 2s infinite;
+}
+
+
+
+p{
+    color: #fff;
+    font-size: 30px;
+}
+
+span{
+    color: #fd3434d8;
+    position: relative;
+}
+
+span::before{
+    content: '';
+    animation: words 20s infinite;
+    font-weight: 500;
+}
+
+p span::after{
+    content: '';
+    position: absolute;
+    background: #0a0a0a;
+    height: 100%;
+    width: calc(100% + 8px);
+    border-left: 4px solid #fd3434d8;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+
+i{
+    font-size: 100px;
+    animation: coeur 5s infinite ease-in;
+    position: absolute;
+    color: red;
+    transform: translateY(55vh);
+}
+
+i:nth-child(2){
+    animation-delay: .5s;
+    left: 140px;
+    font-size: 20px;
+}
+i:nth-child(3){
+    animation-delay: 3s;
+    left: 100px;
+    font-size: 30px;
+}
+
+i:nth-child(4){
+    animation-delay: 1s;
+    left: 60px;
+    font-size: 60px;
+}
+
+i:nth-child(5){
+    animation-delay: 3.5s;
+    left: 20px;
+    font-size: 16px;
+}
+
+i:nth-child(6){
+    animation-delay: 1.5s;
+    right: 160px;
+    font-size: 20px;
+}
+
+i:nth-child(7){
+    animation-delay: 4s;
+    right: 120px;
+    font-size: 25px;
+}
+
+i:nth-child(8){
+    animation-delay: 2s;
+    right: 90px;
+    font-size: 20px;
+}
+
+i:nth-child(9){
+    animation-delay: 4.5s;
+    right: 50px;
+    font-size: 60px;
+}
+
+i:nth-child(10){
+    animation-delay: 2.5s;
+    right: 10px;
+    font-size: 20px;
+}
+
+i:nth-child(11){
+    font-size: 60px;
+    animation: logo 1s infinite;
+}
+
+
+@keyframes coeur {
+    0%{
+        transform: translateY(55vh);
+    }
+    100%{
+        transform: translateY(-55vh);
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: 'Mon Emeraude';
+    }
+    21%, 40%{
+        content: 'Ma Reine';
+    }
+    41%, 60%{
+        content: 'Ma Moitié';
+    }
+    61%, 80%{
+        content: 'Ma Khaleesi';
+    }
+    81%, 100%{
+        content: 'Mon Amour';
+    }
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #fc5d0100;
+    }
+}
+
+@keyframes typing {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%, 100%{
+        width: calc(100% + 8px);
+    }
+}
+
+@keyframes logo {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
